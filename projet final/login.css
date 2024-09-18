@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    gap:100px;
+    padding:20px;
+    background-color: white;
+    
+ 
+
+   
+}
+.hamburger{
+    display: none;
+}
+
+@media only screen and (max-width:700px){
+    .hamburger{
+        display:block;
+        cursor:pointer;
+    }
+    .hamburger .line{
+        width:30px;
+        height:2px;
+        background-color: black;
+        margin:6px 0;
+    }
+    .menu{
+     height:0px;
+     position:absolute;
+     top:80px;
+     left:0;
+     right:0;
+     width:100vw;
+     background-color: #222831;
+     transition:0.2s;
+     overflow: hidden;
+    
+    }
+    .menu ul{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        width:fit-content;
+        margin:80px auto 50px auto;
+        text-align: center;
+        transition:0.5s;
+        opacity:0;
+      
+        
+    }
+    .menu.active{
+        height:450px;
+        
+        } 
+        .menu.active ul{
+            opacity: 1;
+        }
+        footer .socials{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            margin:20px ;
+            gap:40px;
+            align-items: center;
+            
+            
+            
+            }
+            .overlay-panel{
+                opacity:0;
+                    
+                 } 
+                 .formContainer{
+                     display:flex;
+                     justify-content: center;
+                     align-items: center;
+                     left:20%;
+                 }
+               
+    
+}
+
+ul{
+    list-style: none;
+}
+.menu ul{
+    display:flex;
+    gap:15px;
+    align-items: center;
+}
+
+button{
+    color:white;
+    background-color:#CD5C08;
+    border:none;
+    border-radius: 10px;
+    width:100px;
+    height:40px;
+    cursor: pointer;
+    font-family: "Kanit";
+    margin:5px;
+}
+button:hover{
+    background-color: #f48835;
+    scale:1.05;
+}
+.menu a:hover{
+    scale:1.05;
+}
+.menu a{
+    color:#0b0b0a;
+    cursor: pointer;
+    font-family: "Kanit";
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.navbar .title{
+    font-family: "Kanit";
+    font-size: 30px;
+}
+.menu{
+    display:flex;
+    gap:15px;
+    align-items: center;
+}
+
+.menu button a {
+    text-decoration: none;
+    color:white;
+}
+
+
+.container{
+    background-color: #fff;
+    position:relative;
+    width:65%;
+    height:500px;
+    margin:30px;
+    padding:20px  ;
+    margin: 50px;
+   box-shadow: 25px 30px 55px #5557;
+    border-radius: 20px;
+    overflow: hidden ;
+
+
+
+}
+
+.formContainer{
+  position:absolute;
+  width:70%;
+  height:100%;
+  padding:0px 40px;
+  transition:all 0.6s ease-in-out;
+}
+.signUpContainer{
+opacity: 0;
+z-index:-2;
+
+}
+.signInContainer{
+  
+    z-index:2;
+}
+
+form{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0px 50px;
+}
+.social-container{
+    display:flex;
+    margin:0 20px;
+    align-items: center;
+}
+span{
+    font-size: 12px;
+}
+.infield{
+    position:relative;
+    margin: 8px 0px;
+    width:100%;
+
+}
+.formButton a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.form input{
+    border-radius: 10px;
+    width:90%;;
+    padding:12px 15px;
+    height:30px;
+    background-color: #f3f3f3;
+    border:none;
+    outline:none;
+}
+label{
+    position:absolute;
+    left:50%;
+    top:100%;
+    transform:translateX(-50%);
+    width:100%;
+    height:2px;
+   transition:0.3s;
+}
+a{
+    color:#333;
+    font-size: 14px;
+    text-decoration: none;
+    margin:15px 0px;
+}
+a.forgot{
+    padding-bottom:3px;
+    border-bottom: 2px solid #EEE;
+}
+.formButton{
+    border-radius: 20px;
+    border:1px solid var(--grad-clr1);
+    background-color: #222831;
+    color:#fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding:12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width:150px;
+    
+}
+.formContainer button{
+    margin-top:17px;
+    transition:80ms ease-in;
+
+}
+.formContainer button:hover{
+    background: gray;
+    color:black;
+
+}
+.overlay-container{
+    position:absolute;
+    top:0;
+    left:60%;
+    width:40%;
+    height:100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+  
+
+
+}
+
+
+.overlay{
+position:relative;
+background: var(--linear-grad);
+color:#fff;
+left:-150%;
+height:100%;
+width:250%;
+transition:transform 0.6s ease-in-out
+
+}
+.overlay-panel{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0px 40px;
+    text-align: center;
+    height:100%;
+    width:35%;
+    transition:0.6s ease-in-out;
+    color:#fff;
+    background-color: #222831;
+    gap:30px;
+   
+}
+.overlay-left{
+    right:60%;
+    transform: translateX(-12%);
+}
+.overlay-right{
+    right:0;
+    transform: translateX(0%);
+}
+
+.overlay-panel h1{
+ color:#0b0b0a
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    display:flex;
+    width:100%;
+    height:30%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:20px;
+    background-color: #222831;
+    color:white;
+    padding: 20px ;
+    
+  
+}
+footer .service{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    color:#f8ddaf
+}
+footer .socials{
+display:flex;
+gap:40px;
+align-items: center;
+
+
+
+}
+.socials .linkedin{
+    display:flex;
+    flex-direction: column;
+    background-color: #31363F;
+    height:100px;
+    border-radius: 10px;
+    padding:10px;
+    
+}
+.socials .mail{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #31363F;
+    height:100px;
+    border-radius: 10px;
+    padding:10px;
+    
+    
+}
+footer .info{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+justify-content: center;
+
+}
+.info .icons{
+    display: flex;
+  align-items: center;
+}
+.info input{
+    border-radius: 10px;
+    height:30px;
+    padding:0 10px;
+}
+.send{
+    display:flex;
+   align-items: center;
+}
